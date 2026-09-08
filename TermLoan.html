@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Term Loan — Business Term Loans for Growing MSMEs</title>
+<style>
+  /* ============ Tokens ============ */
+  :root{
+    --navy-950:#0d1826;
+    --navy-900:#12233d;
+    --navy-800:#1b3155;
+    --navy-700:#274373;
+    --paper:#f6f4ee;
+    --paper-dim:#eae6da;
+    --ink:#1d2430;
+    --ink-soft:#4d5566;
+    --gold:#c08a2e;
+    --gold-deep:#93691f;
+    --gold-pale:#e9d19c;
+    --green:#3f6b4e;
+    --line:#d8d2c0;
+    --radius-s:3px;
+    --serif:"Fraunces","Source Serif 4",Georgia,serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+    html{scroll-behavior:auto;}
+  }
+
+  h1,h2,h3,h4{
+    font-family:var(--serif);
+    font-weight:600;
+    line-height:1.12;
+    margin:0 0 .5em 0;
+    color:var(--navy-900);
+  }
+  p{line-height:1.6; color:var(--ink-soft); max-width:62ch;}
+  a{color:inherit;}
+  button{font-family:var(--sans);}
+
+  ::selection{background:var(--gold-pale); color:var(--navy-950);}
+
+  :focus-visible{
+    outline:2px solid var(--gold-deep);
+    outline-offset:2px;
+  }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ============ Header / Nav ============ */
+  header.site{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:var(--navy-900);
+    border-bottom:1px solid var(--navy-700);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 28px;
+    max-width:1120px;
+    margin:0 auto;
+    gap:24px;
+  }
+  .brand{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    color:var(--paper);
+    text-decoration:none;
+  }
+  .brand .mark{
+    font-family:var(--serif);
+    font-size:1.5rem;
+    font-weight:700;
+    letter-spacing:.01em;
+  }
+  .brand .mark em{
+    font-style:normal;
+    color:var(--gold);
+  }
+  .brand .tagline{
+    font-size:.72rem;
+    color:var(--gold-pale);
+    letter-spacing:.03em;
+    display:none;
+  }
+  @media(min-width:640px){ .brand .tagline{ display:inline; } }
+
+  nav.pages{
+    display:flex;
+    gap:2px;
+    background:var(--navy-800);
+    border-radius:999px;
+    padding:4px;
+  }
+  nav.pages button{
+    background:transparent;
+    border:none;
+    color:var(--gold-pale);
+    padding:9px 16px;
+    border-radius:999px;
+    font-size:.85rem;
+    cursor:pointer;
+    transition:background .18s ease, color .18s ease;
+    white-space:nowrap;
+  }
+  nav.pages button:hover{ color:#fff; }
+  nav.pages button[aria-current="page"]{
+    background:var(--gold);
+    color:var(--navy-950);
+    font-weight:600;
+  }
+
+  .nav-toggle{
+    display:none;
+    background:transparent;
+    border:1px solid var(--navy-700);
+    color:var(--paper);
+    border-radius:var(--radius-s);
+    padding:8px 12px;
+    cursor:pointer;
+  }
+
+  @media(max-width:800px){
+    nav.pages{
+      position:absolute;
+      top:64px; left:0; right:0;
+      flex-direction:column;
+      background:var(--navy-900);
+      border-top:1px solid var(--navy-700);
+      border-radius:0;
+      padding:8px 28px 16px;
+      display:none;
+    }
+    nav.pages.open{ display:flex; }
+    nav.pages button{ text-align:left; border-radius:var(--radius-s); }
+    .nav-toggle{ display:inline-block; }
+    header.site{ position:sticky; }
+  }
+
+  /* ============ Page container ============ */
+  main{ display:block; }
+  .page{ display:none; }
+  .page.active{ display:block; }
+
+  /* ============ Hero ============ */
+  .hero{
+    background:
+      linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 70%, var(--navy-800) 100%);
+    color:var(--paper);
+    padding:76px 0 92px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    right:-140px; top:-120px;
+    width:480px; height:480px;
+    border:1px solid rgba(224,192,116,.18);
+    border-radius:50%;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-40px; top:60px;
+    width:340px; height:340px;
+    border:1px solid rgba(224,192,116,.12);
+    border-radius:50%;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:48px;
+    align-items:end;
+    position:relative;
+  }
+  @media(max-width:860px){ .hero-grid{ grid-template-columns:1fr; } }
+
+  .eyebrow-plain{
+    color:var(--gold-pale);
+    font-size:.85rem;
+    margin-bottom:18px;
+    max-width:46ch;
+  }
+  .hero h1{
+    color:#fff;
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    max-width:14ch;
+    margin-bottom:22px;
+  }
+  .hero h1 .accent{ color:var(--gold); }
+  .hero p.lead{
+    color:#c9d2e2;
+    font-size:1.08rem;
+    max-width:48ch;
+  }
+  .hero-cta{ display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 24px;
+    border-radius:var(--radius-s);
+    font-size:.92rem;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-gold{ background:var(--gold); color:var(--navy-950); }
+  .btn-gold:hover{ background:#d29c3f; }
+  .btn-ghost{ background:transparent; border-color:rgba(246,244,238,.35); color:var(--paper); }
+  .btn-ghost:hover{ border-color:var(--gold-pale); }
+  .btn-line{ background:transparent; border-color:var(--navy-800); color:var(--navy-900); }
+  .btn-line:hover{ border-color:var(--gold-deep); color:var(--gold-deep); }
+
+  .ledger-card{
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:4px;
+    padding:26px 26px 22px;
+    box-shadow:0 24px 60px rgba(4,10,22,.35);
+  }
+  .ledger-card h3{ font-size:1rem; margin-bottom:14px; color:var(--navy-900); }
+  .ledger-row{
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    border-bottom:1px solid var(--line);
+    font-size:.88rem;
+  }
+  .ledger-row:last-child{ border-bottom:none; }
+  .ledger-row .k{ color:var(--ink-soft); }
+  .ledger-row .v{ font-weight:600; color:var(--navy-900); }
+
+  /* ============ Sections generic ============ */
+  section{ padding:64px 0; }
+  section.alt{ background:var(--paper-dim); }
+  .section-head{ max-width:56ch; margin-bottom:38px; }
+  .section-head h2{ font-size:clamp(1.6rem,3vw,2.1rem); }
+
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+  @media(max-width:860px){
+    .grid-3{ grid-template-columns:1fr 1fr; }
+    .grid-2{ grid-template-columns:1fr; }
+  }
+  @media(max-width:600px){ .grid-3{ grid-template-columns:1fr; } }
+
+  .stat-strip{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-top:52px;
+  }
+  .stat{
+    flex:1 1 200px;
+    padding:22px 26px;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{ border-right:none; }
+  .stat .num{
+    font-family:var(--serif);
+    font-size:2rem;
+    color:var(--navy-900);
+    display:block;
+  }
+  .stat .label{ font-size:.82rem; color:var(--ink-soft); }
+
+  /* Product cards */
+  .product-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .product-card .tag{
+    align-self:flex-start;
+    font-size:.72rem;
+    color:var(--gold-deep);
+    border:1px solid var(--gold-pale);
+    background:#fbf3e2;
+    padding:3px 10px;
+    border-radius:999px;
+  }
+  .product-card h3{ font-size:1.15rem; margin-bottom:2px; }
+  .product-card .rate{
+    font-family:var(--serif);
+    font-size:1.5rem;
+    color:var(--navy-900);
+    margin-top:6px;
+  }
+  .product-card .rate small{ font-family:var(--sans); font-size:.75rem; color:var(--ink-soft); font-weight:400; }
+  .product-card ul{
+    margin:8px 0 0; padding-left:18px; color:var(--ink-soft); font-size:.88rem; line-height:1.7;
+  }
+
+  /* Eligibility page */
+  .checklist{ list-style:none; margin:0; padding:0; }
+  .checklist li{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .checklist li:last-child{ border-bottom:none; }
+  .checklist .mark{
+    flex:none;
+    width:24px; height:24px;
+    border-radius:50%;
+    background:var(--green);
+    color:#fff;
+    font-size:.75rem;
+    display:flex; align-items:center; justify-content:center;
+    margin-top:2px;
+  }
+  .checklist h4{ margin:0 0 3px; font-size:.98rem; color:var(--navy-900); font-family:var(--sans); font-weight:600; }
+  .checklist p{ margin:0; font-size:.86rem; }
+
+  .doc-panel{
+    background:var(--navy-900);
+    color:var(--paper);
+    border-radius:4px;
+    padding:28px;
+  }
+  .doc-panel h3{ color:#fff; font-size:1.1rem; }
+  .doc-panel ol{ padding-left:20px; color:#c9d2e2; font-size:.9rem; line-height:1.9; }
+  .doc-panel .note{
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px solid var(--navy-700);
+    font-size:.8rem;
+    color:var(--gold-pale);
+  }
+
+  /* Calculator page */
+  .calc-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    background:#fff;
+  }
+  @media(max-width:800px){ .calc-wrap{ grid-template-columns:1fr; } }
+  .calc-form{ padding:34px; }
+  .calc-result{
+    padding:34px;
+    background:var(--navy-900);
+    color:var(--paper);
+  }
+  .field{ margin-bottom:22px; }
+  .field label{
+    display:flex;
+    justify-content:space-between;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
+  .field label .val{ color:var(--navy-900); font-weight:600; }
+  input[type="range"]{
+    width:100%;
+    accent-color:var(--gold-deep);
+  }
+  input[type="number"]{
+    width:100%;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    border-radius:var(--radius-s);
+    font-size:.95rem;
+    font-family:var(--sans);
+    background:var(--paper);
+  }
+  .calc-result h3{ color:var(--gold-pale); font-size:.85rem; font-weight:600; margin-bottom:6px; letter-spacing:.02em;}
+  .emi-figure{
+    font-family:var(--serif);
+    font-size:2.6rem;
+    color:#fff;
+    margin:4px 0 22px;
+  }
+  .emi-figure span{ font-size:1.1rem; color:var(--gold-pale); }
+  .breakdown-row{
+    display:flex; justify-content:space-between;
+    padding:11px 0;
+    border-bottom:1px solid var(--navy-700);
+    font-size:.88rem;
+  }
+  .breakdown-row .k{ color:#a9b4c9; }
+  .breakdown-row .v{ font-weight:600; }
+  .bar{
+    display:flex; height:8px; border-radius:4px; overflow:hidden; margin:20px 0 6px;
+    background:var(--navy-800);
+  }
+  .bar .principal{ background:var(--gold); }
+  .bar .interest{ background:var(--navy-700); }
+  .bar-legend{ display:flex; gap:18px; font-size:.76rem; color:#a9b4c9; }
+  .bar-legend span::before{
+    content:""; display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:6px;
+  }
+  .bar-legend .l1::before{ background:var(--gold); }
+  .bar-legend .l2::before{ background:var(--navy-700); }
+
+  /* Contact page */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:44px;
+  }
+  @media(max-width:860px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-form .field label{ color:var(--ink-soft); }
+  .contact-form input, .contact-form select, .contact-form textarea{
+    width:100%;
+    padding:11px 13px;
+    border:1px solid var(--line);
+    border-radius:var(--radius-s);
+    background:#fff;
+    font-family:var(--sans);
+    font-size:.92rem;
+    color:var(--ink);
+  }
+  .contact-form textarea{ resize:vertical; min-height:96px; }
+  .contact-info h3{ font-size:1.05rem; }
+  .info-row{ display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--line); }
+  .info-row:last-child{ border-bottom:none; }
+  .info-row .k{ font-size:.78rem; color:var(--ink-soft); min-width:100px; }
+  .info-row .v{ font-size:.92rem; color:var(--navy-900); font-weight:600; }
+  .form-status{
+    margin-top:14px;
+    font-size:.85rem;
+    color:var(--green);
+    display:none;
+  }
+  .form-status.show{ display:block; }
+
+  /* ============ Footer ============ */
+  footer.site{
+    background:var(--navy-950);
+    color:#9aa7bd;
+    padding:44px 0 26px;
+    margin-top:0;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:32px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--navy-800);
+  }
+  @media(max-width:700px){ .footer-grid{ grid-template-columns:1fr; } }
+  .footer-grid h4{ color:var(--gold-pale); font-size:.82rem; font-family:var(--sans); font-weight:600; margin-bottom:12px; }
+  .footer-grid p{ color:#8b96ac; font-size:.85rem; }
+  .footer-grid ul{ list-style:none; margin:0; padding:0; }
+  .footer-grid li{ margin-bottom:9px; }
+  .footer-grid a{ color:#c3cbdb; text-decoration:none; font-size:.87rem; }
+  .footer-grid a:hover{ color:var(--gold); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding-top:20px;
+    font-size:.78rem;
+    color:#6f7994;
+  }
+  .udyam{
+    color:#c3cbdb;
+    letter-spacing:.02em;
+  }
+  .udyam strong{ color:var(--gold-pale); font-weight:600; }
+
+  /* Skip link */
+  .skip-link{
+    position:absolute; left:-999px; top:0;
+    background:var(--gold); color:var(--navy-950);
+    padding:10px 16px; z-index:100; border-radius:0 0 6px 0;
+  }
+  .skip-link:focus{ left:0; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#" class="brand" data-nav="home">
+      <span class="mark">Term<em>Loan</em></span>
+      <span class="tagline">Business capital, sanctioned right</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="pageNav">Menu</button>
+    <nav class="pages" id="pageNav">
+      <button data-page="home" aria-current="page">Home</button>
+      <button data-page="products">Loan Products</button>
+      <button data-page="eligibility">Eligibility</button>
+      <button data-page="calculator">EMI Calculator</button>
+      <button data-page="contact">Contact</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ PAGE 1: HOME ============ -->
+  <section class="page active" id="page-home" data-page-section="home">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow-plain">Term loans for shops, manufacturers and service businesses across India</p>
+          <h1>Capital that arrives before the opportunity leaves.<span class="accent"></span></h1>
+          <p class="lead">TermLoan structures fixed-tenure business loans against clear, fixed EMIs — no revolving surprises, no vague fine print. Apply once, get a decision in days.</p>
+          <div class="hero-cta">
+            <button class="btn btn-gold" data-goto="calculator">Estimate your EMI</button>
+            <button class="btn btn-ghost" data-goto="products">See loan products</button>
+          </div>
+        </div>
+        <div class="ledger-card">
+          <h3>Indicative loan summary</h3>
+          <div class="ledger-row"><span class="k">Loan amount</span><span class="v">₹10,00,000</span></div>
+          <div class="ledger-row"><span class="k">Tenure</span><span class="v">36 months</span></div>
+          <div class="ledger-row"><span class="k">Interest rate</span><span class="v">13.5% p.a.</span></div>
+          <div class="ledger-row"><span class="k">Monthly EMI</span><span class="v">₹33,930</span></div>
+          <div class="ledger-row"><span class="k">Processing fee</span><span class="v">1.5% + GST</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Built for businesses that need a decision, not a queue</h2>
+          <p>Every product is a fixed-tenure term loan — you know the EMI on day one, and it doesn't move.</p>
+        </div>
+        <div class="grid-3">
+          <div class="product-card">
+            <span class="tag">Fixed EMI</span>
+            <h3>Predictable repayment</h3>
+            <p>Your EMI is locked at sanction. No floating surprises mid-tenure, so cash flow planning stays simple.</p>
+          </div>
+          <div class="product-card">
+            <span class="tag">48-hour review</span>
+            <h3>Fast credit decisions</h3>
+            <p>Upload GST returns and bank statements once — most applications get an initial decision within two working days.</p>
+          </div>
+          <div class="product-card">
+            <span class="tag">MSME-first</span>
+            <h3>Built around Udyam businesses</h3>
+            <p>Underwriting is tuned for registered MSMEs, with collateral-light options for eligible borrowers.</p>
+          </div>
+        </div>
+
+        <div class="stat-strip">
+          <div class="stat"><span class="num">₹840 Cr+</span><span class="label">disbursed to MSMEs to date</span></div>
+          <div class="stat"><span class="num">11,200+</span><span class="label">term loans sanctioned</span></div>
+          <div class="stat"><span class="num">48 hrs</span><span class="label">average initial decision time</span></div>
+          <div class="stat"><span class="num">4.7 / 5</span><span class="label">average borrower rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How a TermLoan sanction actually moves</h2>
+          <p>Four steps, start to disbursal — no branch visits required for most applicants.</p>
+        </div>
+        <div class="grid-3">
+          <div class="product-card">
+            <h3>1. Apply online</h3>
+            <p>Share basic business details and the amount you need. Takes under six minutes.</p>
+          </div>
+          <div class="product-card">
+            <h3>2. Upload documents</h3>
+            <p>GST returns, bank statements and Udyam certificate — uploaded once, verified digitally.</p>
+          </div>
+          <div class="product-card">
+            <h3>3. Get sanctioned</h3>
+            <p>Our credit team reviews and issues a sanction letter with the final rate and tenure.</p>
+          </div>
+          <div class="product-card">
+            <h3>4. Funds disbursed</h3>
+            <p>Signed agreement in, funds move to your current account — typically within 24 hours.</p>
+          </div>
+          <div class="product-card">
+            <h3>Repay on schedule</h3>
+            <p>Auto-debit EMI on a date you choose. Prepay any time after six months with no lock-in penalty.</p>
+          </div>
+          <div class="product-card">
+            <h3>Track anytime</h3>
+            <p>A running ledger of paid and upcoming EMIs is available on request from your relationship contact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============ PAGE 2: LOAN PRODUCTS ============ -->
+  <section class="page" id="page-products" data-page-section="products">
+    <div class="wrap" style="padding-top:56px;">
+      <div class="section-head">
+        <h2>Loan products</h2>
+        <p>Three fixed-tenure term loans, each sized for a different stage of the business. Rates shown are starting rates and vary by credit profile.</p>
+      </div>
+      <div class="grid-3">
+        <div class="product-card">
+          <span class="tag">Working capital</span>
+          <h3>Shop &amp; Trade Term Loan</h3>
+          <div class="rate">11.5% <small>p.a. onwards</small></div>
+          <ul>
+            <li>₹1 lakh – ₹25 lakh</li>
+            <li>Tenure: 12–48 months</li>
+            <li>For traders, retailers, distributors</li>
+            <li>Collateral-free up to ₹10 lakh</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <span class="tag">Expansion</span>
+          <h3>Manufacturing Term Loan</h3>
+          <div class="rate">12.75% <small>p.a. onwards</small></div>
+          <ul>
+            <li>₹5 lakh – ₹2 crore</li>
+            <li>Tenure: 24–84 months</li>
+            <li>For machinery, capacity, or unit expansion</li>
+            <li>Hypothecation of purchased asset accepted as security</li>
+          </ul>
+        </div>
+        <div class="product-card">
+          <span class="tag">Services</span>
+          <h3>Professional &amp; Services Term Loan</h3>
+          <div class="rate">13.25% <small>p.a. onwards</small></div>
+          <ul>
+            <li>₹1 lakh – ₹50 lakh</li>
+            <li>Tenure: 12–60 months</li>
+            <li>For clinics, agencies, consultancies, studios</li>
+            <li>Income-based underwriting, minimal paperwork</li>
+          </ul>
+        </div>
+      </div>
+
+      <section style="padding-left:0;padding-right:0;">
+        <div class="grid-2" style="margin-top:12px;">
+          <div>
+            <h3 style="font-family:var(--sans); font-size:1.05rem; color:var(--navy-900);">What's common across every product</h3>
+            <p>A fixed interest rate for the full tenure, a processing fee capped at 1.5% of the sanctioned amount, and no charge for repaying early after the sixth EMI. There is no prepayment penalty on floating-linked accounts, and part-prepayment is accepted from the seventh month.</p>
+          </div>
+          <div>
+            <h3 style="font-family:var(--sans); font-size:1.05rem; color:var(--navy-900);">What decides your rate</h3>
+            <p>Final pricing depends on your business vintage, GST turnover trend, existing credit obligations, and whether the loan is secured or collateral-free. Applicants with two years of clean repayment history typically land closer to the starting rate.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3: ELIGIBILITY ============ -->
+  <section class="page" id="page-eligibility" data-page-section="eligibility">
+    <div class="wrap" style="padding-top:56px;">
+      <div class="section-head">
+        <h2>Eligibility &amp; documents</h2>
+        <p>Most registered MSMEs with at least twelve months of operating history qualify. Check the criteria and required documents below before you apply.</p>
+      </div>
+      <div class="grid-2">
+        <div>
+          <ul class="checklist">
+            <li>
+              <span class="mark">✓</span>
+              <div><h4>Business vintage</h4><p>At least 12 months of continuous operation under the current ownership.</p></div>
+            </li>
+            <li>
+              <span class="mark">✓</span>
+              <div><h4>Udyam registration</h4><p>A valid Udyam Registration Certificate for the applying business entity.</p></div>
+            </li>
+            <li>
+              <span class="mark">✓</span>
+              <div><h4>Minimum turnover</h4><p>Annual turnover of ₹6 lakh or more, evidenced by GST returns or bank credits.</p></div>
+            </li>
+            <li>
+              <span class="mark">✓</span>
+              <div><h4>Applicant age</h4><p>Proprietor, partners, or directors between 23 and 65 years at loan maturity.</p></div>
+            </li>
+            <li>
+              <span class="mark">✓</span>
+              <div><h4>Credit history</h4><p>No default currently reported on existing business or personal credit facilities.</p></div>
+            </li>
+          </ul>
+        </div>
+        <div class="doc-panel">
+          <h3>Documents to keep ready</h3>
+          <ol>
+            <li>Udyam Registration Certificate</li>
+            <li>PAN card of the business and applicant(s)</li>
+            <li>GST registration and last 12 months of returns</li>
+            <li>Bank statements — last 12 months, primary account</li>
+            <li>Address proof of business premises</li>
+            <li>Financial statements or ITR, last 2 years (if applicable)</li>
+          </ol>
+          <div class="note">Documents are uploaded once during application and verified digitally — no physical courier needed for standard applications.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 4: EMI CALCULATOR ============ -->
+  <section class="page" id="page-calculator" data-page-section="calculator">
+    <div class="wrap" style="padding-top:56px;">
+      <div class="section-head">
+        <h2>EMI calculator</h2>
+        <p>Move the sliders to estimate your monthly instalment. This is an indicative figure — your actual sanction letter will confirm the final rate.</p>
+      </div>
+
+      <div class="calc-wrap">
+        <div class="calc-form">
+          <div class="field">
+            <label for="loanAmount">Loan amount <span class="val" id="loanAmountVal">₹10,00,000</span></label>
+            <input type="range" id="loanAmount" min="100000" max="20000000" step="50000" value="1000000">
+          </div>
+          <div class="field">
+            <label for="tenure">Tenure <span class="val" id="tenureVal">36 months</span></label>
+            <input type="range" id="tenure" min="6" max="84" step="6" value="36">
+          </div>
+          <div class="field">
+            <label for="rate">Interest rate <span class="val" id="rateVal">13.5% p.a.</span></label>
+            <input type="range" id="rate" min="10" max="20" step="0.25" value="13.5">
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <label for="loanAmountInput">Or type an exact amount (₹)</label>
+            <input type="number" id="loanAmountInput" min="100000" max="20000000" step="10000" value="1000000">
+          </div>
+        </div>
+        <div class="calc-result">
+          <h3>Estimated monthly EMI</h3>
+          <div class="emi-figure"><span>₹</span><span id="emiOutput">33,930</span></div>
+
+          <div class="breakdown-row"><span class="k">Principal amount</span><span class="v" id="principalOut">₹10,00,000</span></div>
+          <div class="breakdown-row"><span class="k">Total interest payable</span><span class="v" id="interestOut">₹2,21,480</span></div>
+          <div class="breakdown-row"><span class="k">Total repayment</span><span class="v" id="totalOut">₹12,21,480</span></div>
+
+          <div class="bar" aria-hidden="true">
+            <div class="principal" id="barPrincipal" style="width:82%"></div>
+            <div class="interest" id="barInterest" style="width:18%"></div>
+          </div>
+          <div class="bar-legend">
+            <span class="l1">Principal</span>
+            <span class="l2">Interest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 5: CONTACT ============ -->
+  <section class="page" id="page-contact" data-page-section="contact">
+    <div class="wrap" style="padding-top:56px; padding-bottom:70px;">
+      <div class="section-head">
+        <h2>Talk to a loan officer</h2>
+        <p>Send your details and a loan officer will call within one business day. No obligation, no impact on your credit score at this stage.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <label for="cName">Full name</label>
+            <input type="text" id="cName" name="name" required>
+          </div>
+          <div class="field">
+            <label for="cPhone">Mobile number</label>
+            <input type="tel" id="cPhone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+          </div>
+          <div class="field">
+            <label for="cAmount">Loan amount required</label>
+            <select id="cAmount" name="amount">
+              <option>Up to ₹5 lakh</option>
+              <option>₹5 lakh – ₹25 lakh</option>
+              <option>₹25 lakh – ₹1 crore</option>
+              <option>Above ₹1 crore</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cMessage">Tell us about your business</label>
+            <textarea id="cMessage" name="message" placeholder="What is this loan for, and when do you need it?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-line">Request a callback</button>
+          <p class="form-status" id="formStatus">Thanks — your request has been noted. A loan officer will call you shortly.</p>
+        </form>
+        <div class="contact-info">
+          <h3>Reach us directly</h3>
+          <div class="info-row"><span class="k">Phone</span><span class="v">+91 522 400 1180</span></div>
+          <div class="info-row"><span class="k">Email</span><span class="v">hello@termloan.example</span></div>
+          <div class="info-row"><span class="k">Hours</span><span class="v">Mon–Sat, 9:30 AM – 6:30 PM</span></div>
+          <div class="info-row"><span class="k">Registered office</span><span class="v">Gomti Nagar, Lucknow, Uttar Pradesh</span></div>
+          <br>
+          <h3>Before you call</h3>
+          <p>Keep your Udyam Registration Certificate, PAN, and the last six months of bank statements handy — it shortens the first conversation considerably.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>TermLoan</h4>
+        <p>Fixed-tenure business term loans for MSMEs, traders, manufacturers and service businesses across India. Sanctions are subject to credit policy and documentation.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="#" data-nav="home">Home</a></li>
+          <li><a href="#" data-nav="products">Loan Products</a></li>
+          <li><a href="#" data-nav="eligibility">Eligibility</a></li>
+          <li><a href="#" data-nav="calculator">EMI Calculator</a></li>
+          <li><a href="#" data-nav="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+91 522 400 1180</li>
+          <li>hello@termloan.example</li>
+          <li>Gomti Nagar, Lucknow, UP</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="udyam">Udyam Registration No.: <strong>UDYAM-UP-29-0257019</strong></span>
+      <span>© <span id="year"></span> TermLoan. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Page navigation (SPA-style single file) ---------- */
+  var pages = document.querySelectorAll(".page");
+  var navButtons = document.querySelectorAll("nav.pages button[data-page]");
+  var navLinks = document.querySelectorAll("[data-nav]");
+  var gotoButtons = document.querySelectorAll("[data-goto]");
+  var navToggle = document.getElementById("navToggle");
+  var pageNav = document.getElementById("pageNav");
+
+  function showPage(name){
+    pages.forEach(function(p){
+      p.classList.toggle("active", p.getAttribute("data-page-section") === name);
+    });
+    navButtons.forEach(function(b){
+      if(b.getAttribute("data-page") === name){
+        b.setAttribute("aria-current","page");
+      } else {
+        b.removeAttribute("aria-current");
+      }
+    });
+    window.scrollTo({top:0, behavior:"smooth"});
+    if(history.replaceState){
+      history.replaceState(null, "", "#" + name);
+    }
+    pageNav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded","false");
+  }
+
+  navButtons.forEach(function(b){
+    b.addEventListener("click", function(){ showPage(b.getAttribute("data-page")); });
+  });
+  navLinks.forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      showPage(a.getAttribute("data-nav"));
+    });
+  });
+  gotoButtons.forEach(function(b){
+    b.addEventListener("click", function(){ showPage(b.getAttribute("data-goto")); });
+  });
+  navToggle.addEventListener("click", function(){
+    var open = pageNav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  var initial = (location.hash || "").replace("#","");
+  var validPages = ["home","products","eligibility","calculator","contact"];
+  if(validPages.indexOf(initial) !== -1){ showPage(initial); }
+
+  /* ---------- Footer year ---------- */
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---------- EMI Calculator ---------- */
+  var amountSlider = document.getElementById("loanAmount");
+  var amountInput  = document.getElementById("loanAmountInput");
+  var tenureSlider = document.getElementById("tenure");
+  var rateSlider   = document.getElementById("rate");
+
+  var loanAmountVal = document.getElementById("loanAmountVal");
+  var tenureVal      = document.getElementById("tenureVal");
+  var rateVal         = document.getElementById("rateVal");
+
+  var emiOutput      = document.getElementById("emiOutput");
+  var principalOut   = document.getElementById("principalOut");
+  var interestOut    = document.getElementById("interestOut");
+  var totalOut        = document.getElementById("totalOut");
+  var barPrincipal    = document.getElementById("barPrincipal");
+  var barInterest      = document.getElementById("barInterest");
+
+  function formatINR(num){
+    num = Math.round(num);
+    var isNeg = num < 0;
+    num = Math.abs(num);
+    var s = num.toString();
+    var lastThree = s.substring(s.length - 3);
+    var other = s.substring(0, s.length - 3);
+    if(other !== ""){ lastThree = "," + lastThree; }
+    var formatted = other.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+    return (isNeg ? "-₹" : "₹") + formatted;
+  }
+
+  function calculate(){
+    var P = parseFloat(amountSlider.value);
+    var months = parseInt(tenureSlider.value, 10);
+    var annualRate = parseFloat(rateSlider.value);
+    var r = (annualRate / 12) / 100;
+
+    var emi;
+    if(r === 0){
+      emi = P / months;
+    } else {
+      var factor = Math.pow(1 + r, months);
+      emi = (P * r * factor) / (factor - 1);
+    }
+
+    var totalPayment = emi * months;
+    var totalInterest = totalPayment - P;
+
+    loanAmountVal.textContent = formatINR(P);
+    tenureVal.textContent = months + " months";
+    rateVal.textContent = annualRate.toFixed(2) + "% p.a.";
+
+    emiOutput.textContent = formatINR(emi).replace("₹","");
+    principalOut.textContent = formatINR(P);
+    interestOut.textContent = formatINR(totalInterest);
+    totalOut.textContent = formatINR(totalPayment);
+
+    var principalPct = Math.max(4, Math.min(96, (P / totalPayment) * 100));
+    barPrincipal.style.width = principalPct + "%";
+    barInterest.style.width = (100 - principalPct) + "%";
+  }
+
+  amountSlider.addEventListener("input", function(){
+    amountInput.value = amountSlider.value;
+    calculate();
+  });
+  amountInput.addEventListener("input", function(){
+    var v = parseFloat(amountInput.value);
+    if(isNaN(v)) return;
+    v = Math.min(20000000, Math.max(100000, v));
+    amountSlider.value = v;
+    calculate();
+  });
+  tenureSlider.addEventListener("input", calculate);
+  rateSlider.addEventListener("input", calculate);
+
+  calculate();
+
+  /* ---------- Contact form (client-side only) ---------- */
+  var form = document.getElementById("contactForm");
+  var status = document.getElementById("formStatus");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    status.classList.add("show");
+    form.reset();
+  });
+
+})();
+</script>
+
+</body>
+</html>
